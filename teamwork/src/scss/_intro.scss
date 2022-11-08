@@ -1,0 +1,104 @@
+.intro {
+  max-width: 600px;
+
+  p {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+  }
+
+  small {
+    display: block;
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+  }
+
+  h1 {
+    font-size: 2.8em;
+    margin-bottom: 1.5em;
+  }
+}
+
+.button {
+  border: 2px solid var(--c-brand);
+  color: var(--c-brand);
+  background: none;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 6px 15px;
+  border-radius: 5px;
+  display: block;
+  margin: 0 20px;
+
+  &:hover {
+    background: var(--c-brand);
+    color: #000;
+    cursor: pointer;
+  }
+}
+
+.star-wars-scroller {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  height: 100vh;
+  padding-top: 100vh;
+  width: 100%;
+  background: black;
+  color: #feda4a;
+  font-family: 'Pathway Gothic One', sans-serif;
+  font-size: 500%;
+  font-weight: 600;
+  letter-spacing: 6px;
+  line-height: 150%;
+  perspective: 400px;
+  text-align: justify;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  z-index: 1;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease-in-out;
+
+  &.active {
+    opacity: 1;
+  }
+}
+
+.crawl {
+  position: relative;
+  top: 99999px;
+  transform-origin: 50% 100%;
+  animation: crawl 50s linear;
+
+  > {
+    .title {
+      font-size: 90%;
+      text-align: center;
+
+      h1 {
+        margin: 0 0 100px;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: #feda4a;
+      }
+    }
+  }
+  p {
+    margin-bottom: 40px;
+    color: #feda4a;
+  }
+}
+
+@keyframes crawl {
+  0% {
+    top: -100px;
+    transform: rotateX(20deg) translateZ(0);
+  }
+  100% {
+    top: -6000px;
+    transform: rotateX(25deg) translateZ(-2500px);
+  }
+}

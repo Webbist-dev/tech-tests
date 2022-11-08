@@ -1,0 +1,32 @@
+{
+  "name": "teamworktest",
+  "author": "Alex Bennett",
+  "twitter": "@webbist",
+  "linkedin": "https://www.linkedin.com/in/webbist",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview --port 5050",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore --fix src",
+    "format": "prettier .  --write"
+  },
+  "dependencies": {
+    "dayjs": "^1.11.0",
+    "mitt": "^3.0.0",
+    "redaxios": "^0.4.1",
+    "vue": "^3.2.29",
+    "vue-router": "^4.0.12"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^2.1.0",
+    "@vue/eslint-config-prettier": "^7.0.0",
+    "eslint": "^8.9.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-vue": "^8.4.1",
+    "prettier": "^2.5.1",
+    "sass": "^1.49.8",
+    "vite": "^2.7.13",
+    "vite-plugin-eslint": "^1.3.0"
+  }
+}

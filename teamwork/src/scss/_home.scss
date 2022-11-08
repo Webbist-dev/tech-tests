@@ -1,0 +1,101 @@
+.app {
+  position: absolute;
+  height: 100%;
+  width: calc(100% - 230px);
+  top: 0;
+  left: 0;
+  margin: 130px 115px;
+  overflow: hidden;
+
+  .app-content {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 0 115px;
+  }
+
+  .border {
+    position: absolute;
+
+    &.top,
+    &.bottom {
+      opacity: 0.75;
+      width: 100%;
+
+      &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        right: 0;
+        bottom: 0;
+        box-shadow: 0 0 10px rgb(235 56 56 / 90%);
+        border: 2px dashed var(--c-empire);
+      }
+    }
+
+    &.top {
+      top: 205px;
+    }
+
+    &.bottom {
+      bottom: 420px;
+    }
+
+    &.left,
+    &.right {
+      height: 65%;
+      width: 30px;
+
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: -100px;
+        opacity: 0.75;
+        box-shadow: 0 5px 10px rgb(235 56 56 / 90%);
+        height: 100%;
+        width: 2px;
+        background: var(--c-empire);
+      }
+
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: -100px;
+        opacity: 0.75;
+        box-shadow: 0 5px 10px rgb(235 56 56 / 90%);
+        height: 100%;
+        width: 2px;
+        background: var(--c-empire);
+      }
+    }
+
+    &.left {
+      left: 0;
+      width: 30px;
+
+      &:before {
+        left: 30px;
+      }
+      &:after {
+        left: 50px;
+      }
+    }
+
+    &.right {
+      right: 0;
+      width: 30px;
+
+      &:before {
+        right: 30px;
+      }
+      &:after {
+        right: 50px;
+      }
+    }
+  }
+}

@@ -1,0 +1,189 @@
+/* color palette from <https://github.com/vuejs/theme> */
+:root {
+  --c-white: #ffffff;
+  --c-white-soft: #f8f8f8;
+  --c-white-mute: #f2f2f2;
+
+  --c-black: #040813;
+  --c-black-soft: #222222;
+  --c-black-mute: #282828;
+
+  --c-brand: #fdc101;
+  --c-empire: #eb3838;
+  --c-divider-light-1: rgba(60, 60, 60, 0.29);
+  --c-divider-light-2: rgba(60, 60, 60, 0.12);
+  --c-divider-dark-1: rgba(84, 84, 84, 0.65);
+  --c-divider-dark-2: rgba(84, 84, 84, 0.48);
+
+  --c-text-light-2: rgba(60, 60, 60, 0.66);
+  --c-text-light-1: #fff;
+  --c-text-light-2: rgba(235, 235, 235, 0.64);
+}
+
+/* semantic color variables for this project */
+:root {
+  --color-black: #000;
+  --color-background: var(--c-white);
+  --color-background-soft: var(--c-white-soft);
+  --color-background-mute: var(--c-white-mute);
+  --color-border: var(--c-divider-light-2);
+  --color-border-hover: var(--c-divider-light-1);
+
+  --color-heading: var(--c-text-light-1);
+  --color-text: var(--c-text-light-1);
+
+  --section-gap: 160px;
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: var(--c-black);
+    --color-background-soft: var(--c-black-soft);
+    --color-background-mute: var(--c-black-mute);
+
+    --color-border: var(--c-divider-dark-2);
+    --color-border-hover: var(--c-divider-dark-1);
+
+    --color-heading: var(--c-text-dark-1);
+    --color-text: var(--c-text-dark-2);
+  }
+} */
+
+@font-face {
+  font-family: 'Aurebesh';
+  src: url('/fonts/Aurebesh.ttf.woff') format('woff'),
+    url('/fonts/Aurebesh.ttf.svg#Aurebesh') format('svg'),
+    url('/fonts/Aurebesh.ttf.eot'),
+    url('/fonts/Aurebesh.ttf.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+$duration: 400ms;
+$shift: 200ms;
+$start: 800ms;
+
+@keyframes enter {
+  to,
+  20%,
+  40%,
+  60%,
+  80% {
+    opacity: 1;
+  }
+  from,
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    opacity: 0;
+  }
+}
+
+
+@keyframes exit {
+  to,
+  20%,
+  40%,
+  60%,
+  80% {
+    opacity: 0;
+  }
+  from,
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    opacity: 1;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  position: relative;
+  font-weight: normal;
+}
+
+body {
+  background: var(--color-black);
+  min-height: 100vh;
+  color: var(--color-text);
+  transition: color 0.5s, background-color 0.5s;
+  line-height: 1.6;
+  font-family: 'Inter', 'Helvetica Neue', sans-serif;
+  font-size: 15px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  p {
+    color: var(--color-text);
+  }
+}
+
+#app {
+  position: relative;
+
+  &:before {
+    pointer-events: none;
+    position: absolute;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    opacity: 0.5;
+    background: lighten(#111, 5%)
+      url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAG0lEQVQYV2P8//+/FCMj4zMGJMCIzIGxKRQEAJgPBAbJqUVTAAAAAElFTkSuQmCC)
+      repeat;
+  }
+}
+
+strong {
+  font-weight: bold;
+}
+
+h2 {
+  font-weight: bold;
+  color: var(--c-brand);
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-weight: bold;
+}
+
+.aurek-besh {
+  font-family: 'Aurebesh', sans-serif;
+}
+
+.main {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  transition-delay: 0.5s;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+
+  &:before {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background: url('@/assets/empire.svg') no-repeat left center;
+  }
+
+  &.active {
+    opacity: 1;
+  }
+}
+

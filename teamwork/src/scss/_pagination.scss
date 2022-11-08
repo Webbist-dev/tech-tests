@@ -1,0 +1,60 @@
+.pagination {
+  padding: 50px 0 0;
+  margin-top: 25px;
+  align-items: center;
+
+  span {
+    margin-right: 40px;
+  }
+}
+
+.pager-button {
+  background: none;
+  border: none;
+  outline: none;
+  width: 25px;
+  height: 15px;
+  background-image: linear-gradient(
+      to top left,
+      #fff 0 50%,
+      transparent 50% 100%
+    ),
+    linear-gradient(to top right, #fff 0 50%, transparent 50% 100%),
+    linear-gradient(#fff 0 100%);
+  background-size: 20% 100%, 20% 100%, 60% 100%;
+  background-position: left top, right top, center top;
+  background-repeat: no-repeat;
+
+  &[disabled] {
+    background-image: linear-gradient(
+        to top left,
+        var(--c-empire) 0 50%,
+        transparent 50% 100%
+      ),
+      linear-gradient(to top right, var(--c-empire) 0 50%, transparent 50% 100%),
+      linear-gradient(var(--c-empire) 0 100%);
+
+      &:hover {
+        cursor: initial;
+      }
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-image: linear-gradient(
+        to top left,
+        var(--c-empire) 0 50%,
+        transparent 50% 100%
+      ),
+      linear-gradient(to top right, var(--c-empire) 0 50%, transparent 50% 100%),
+      linear-gradient(var(--c-empire) 0 100%);
+  }
+
+  &.pager-left {
+    transform: rotate(-90deg);
+  }
+
+  &.pager-right {
+    transform: rotate(90deg);
+  }
+}

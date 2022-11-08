@@ -1,0 +1,12 @@
+.detail {
+  display: flex;
+
+  strong {
+    margin-right: 15px;
+  }
+
+  a {
+    color: var(--c-brand);
+    font-weight: bold;
+  }
+}
