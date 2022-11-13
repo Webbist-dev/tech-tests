@@ -1,6 +1,8 @@
 # cavu-tech-test
 
-This template should help get you started developing with Vue 3 in Vite.
+This template should help get you started developing with Vue 2.7.13 in Vite.
+
+Had to use 2.7.13 for composition api, didnt want to add https://www.npmjs.com/package/@vue/composition-api
 
 ## Recommended IDE Setup
 
@@ -51,7 +53,7 @@ We would expect this task to take a few hours, however there is no strict time l
 * Use HTML and CSS (using pre-compilers such as LESS and Sass or CSS-in-JS is fine).
 -- Would use SASS if production, some small builder and probably some underlying framework (not bootstrap!)
 * Use **VueJS v2** and vanilla JavaScript. You *may* use Nuxt - we'll leave this up to you.
--- Originally built it in 3, then ported it back to 2, then built it from scratch in 2 - should have read the readme better first time!
+-- Originally built it in 3, then ported it back to 2, then built it from scratch in 2.7.13 - should have read the readme better first time!
 * Support the major browsers (Chrome, Firefox, Safari, Edge).
 -- Should work, though needs testing!
 * Be responsive.
