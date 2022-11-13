@@ -1,0 +1,32 @@
+:root {
+  --color-text: #000;
+  --background-yellow: radial-gradient(81.65% 10898.53% at 18.35% 50%, #EAD550 0%, #EAD250 2.07%, #EAD250 2.08%, #EAD250 2.09%, #EAD250 9.38%, #EAD250 25%, #EAD250 25.01%, #EAD250 27.08%, #EAD250 31.25%, #EAD250 31.26%, #EAD250 34.38%, #EAD251 37.5%, #EAD251 41.15%, #EAD251 45.83%, #EAD351 66.42%, #E5CD42 80.21%, #E2C837 90.62%, #E2C836 90.64%, #DFC42E 100%);
+  --background-grey: linear-gradient(90deg, #464646 0%, #000000 100%);
+  --background-light-grey:  linear-gradient(90deg, #FFFFFF 0%, #F7F8F9 12.5%, #EFF1F4 20.31%, #EDF0F3 22.4%, #E9EDF0 27.6%, #E4E9ED 33.33%, #E3E8EC 33.34%, #D9E0E6 38.05%, #B3C0CD 56.25%, #C0CAD5 63.01%, #C3CDD8 63.02%, #C9D2DC 65.62%, #C0CBD5 77.6%, #BCC8D3 82.29%, #B5C1CE 91.67%, #BAC5D1 91.68%, #B1BECC 96.35%, #AEBCCA 100%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  position: relative;
+  font-weight: normal;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--color-text);
+  line-height: 1.6;
+  font-family:'Helvetica', sans-serif;
+  font-size: 15px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.message h1 {
+  font-size: 32px;
+  text-align: center;
+  color: #f5d836;
+}
