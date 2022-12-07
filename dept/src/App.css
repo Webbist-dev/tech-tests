@@ -1,0 +1,171 @@
+html {
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  height: 100vh;
+  position: relative;
+}
+
+html:before {
+  content: '';
+  background: linear-gradient(100deg, #753AB0, #5A5BAE, #4079AE);
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.container {
+  max-width: 1024px;
+  margin: 100px auto;
+}
+
+.intro {
+  text-align: center;
+}
+
+.search {
+  max-width: 400px;
+  margin: 50px auto 100px;
+}
+
+h1 {
+  font-size: 35px;
+  font-weight: 400;
+}
+
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 50px;
+  }
+}
+
+h2 {
+  font-weight: normal;
+  line-height: 30px;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+@media screen and (min-width: 768px) {
+  h2 {
+    line-height: 40px;
+    font-size: 30px;
+  }
+}
+
+.wrapper {
+  border: 2px solid #bebebe!important;
+  border-radius: 15px!important;
+}
+
+.city-tiles {
+  display: flex;
+  flex-direction: column;
+}
+
+
+@media screen and (min-width: 768px) {
+  .city-tiles {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.time {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.location {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.measurement {
+  text-transform: uppercase;
+}
+
+.city-locations {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 50%;
+}
+
+.city-tile {
+  border: 10px;
+  padding: 30px;
+  margin: 10px;
+  border-radius: 10px;
+  background: white;
+  color: #151515;
+  font-size: 14px;
+  position: relative;
+}
+
+@media screen and (min-width: 768px) {
+  .city-tile {
+    font-size: 18px;
+  }
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.close button {
+  background: none;
+  border: none;
+  position: relative;
+  font-size: 0;
+  text-indent: 99999px;
+  height: 25px;
+  width: 25px;
+}
+
+.close button:hover {
+  cursor: pointer;
+}
+
+.close button:before, .close button:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #151515;
+}
+
+.close button:before {
+  transform: rotate(45deg);
+}
+
+.close button:after {
+  transform: rotate(-45deg);
+}
+
+.city-tile h2 {
+  color: #7835b2;
+  font-weight: bold;
+  margin: 0 0 10px;
+}
+
+.city-name {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  padding: 0 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .city-name {
+    font-size: 30px;
+    display: none;
+  }
+}
